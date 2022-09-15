@@ -13,7 +13,7 @@ const ForgotPassword = () => {
 
     setIsLoading(true);
 
-    const response = await fetch('http://localhost:8181/api/auth/forgotpassword', {
+    const response = await fetch('https://light-teal-leggings.cyclic.app/api/auth/forgotpassword', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'

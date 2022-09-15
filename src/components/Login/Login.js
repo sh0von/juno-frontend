@@ -56,7 +56,7 @@ const Login = () => {
 
         setIsLoading(true);
         // API Call
-        const response = await fetch('http://localhost:8181/api/auth/login', {
+        const response = await fetch('https://light-teal-leggings.cyclic.app/api/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
