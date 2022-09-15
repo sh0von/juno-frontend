@@ -43,8 +43,8 @@ const Sidenav = () => {
               </span>
 
               <div className="text logo-text">
-                  <span className="name">Noteslify</span>
-                  <span className="profession">By DVS Tech Labs</span>
+                  <span className="name">D-Tracker</span>
+                  <span className="profession">by CryWolf</span>
               </div>
           </div>
 
@@ -59,57 +59,13 @@ const Sidenav = () => {
                   <input type="text" placeholder="Search..."/>
               </li>
 
-              <ul className="menu-links">
-                  <li className="nav-link">
-                      <a href="/">
-                          <i className='bx bx-home-alt icon' ></i>
-                          <span className="text nav-text">Soon..</span>
-                      </a>
-                  </li>
-
-                  <li className="nav-link">
-                      <a href="/">
-                          <i className='bx bx-bar-chart-alt-2 icon' ></i>
-                          <span className="text nav-text">Soon..</span>
-                      </a>
-                  </li>
-
-                  <li className="nav-link">
-                      <a href="/">
-                          <i className='bx bx-bell icon'></i>
-                          <span className="text nav-text">Soon..</span>
-                      </a>
-                  </li>
-
-                  <li className="nav-link">
-                      <a href="/">
-                          <i className='bx bx-pie-chart-alt icon' ></i>
-                          <span className="text nav-text">Soon..</span>
-                      </a>
-                  </li>
-
-                  <li className="nav-link">
-                      <a href="/">
-                          <i className='bx bx-heart icon' ></i>
-                          <span className="text nav-text">Soon..</span>
-                      </a>
-                  </li>
-
-                  <li className="nav-link">
-                      <a href="/">
-                          <i className='bx bx-wallet icon' ></i>
-                          <span className="text nav-text">Soon..</span>
-                      </a>
-                  </li>
-
-              </ul>
+             
           </div>
 
           <div className="bottom-content">
               <li>
                   <a onClick={logout} href="/" id="logout-button">
                       <i className ='bx bx-log-out icon' ></i>
-                      <span className="logout">Logout</span>
                   </a>
               </li>
               
