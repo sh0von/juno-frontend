@@ -18,7 +18,7 @@ function App() {
         <Route path = "/setauthtoken/:authtoken" element = {<Setauthtoken />}/>
         <Route path = "/forgotpassword" element = {<ForgotPassword />}/>
         <Route path = "/resetpassword/:email/:token" element = {<ResetPassword />}/>
-        <Route path = "/" element = {<LandingPage />}/>
+        <Route path = "/" element = {<Notes />}/>
       </Routes>
     </Router>
   );
