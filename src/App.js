@@ -6,7 +6,6 @@ import Notes from './components/Notes/Notes';
 import ForgotPassword from './components/ForgotPassword/ForgotPassword';
 import Setauthtoken from './components/Setauthtoken';
 import ResetPassword from './components/ResetPassword/ResetPassword';
-import LandingPage from './components/LandingPage/LandingPage';
 
 function App() {
   return (
