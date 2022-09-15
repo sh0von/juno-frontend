@@ -54,12 +54,15 @@ const Sidenav = () => {
       <div className="menu-bar">
           <div className="menu">
 
-              <li onClick={searchbarClick} className="search-box">
-                  <i className ='bx bx-search icon'></i>
-                  <input type="text" placeholder="Search..."/>
-              </li>
+              <ul className="menu-links">
+                  <li className="nav-link">
+                      <a href="/">
+                          <i className='bx bx-home-alt icon' ></i>
+                          <span className="text nav-text">Soon..</span>
+                      </a>
+                  </li>
 
-             
+              </ul>
           </div>
 
           <div className="bottom-content">
