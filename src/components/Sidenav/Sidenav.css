@@ -12,7 +12,7 @@
 }
 
 .close {
-    width: 68px;
+    width: 90px;
 }
 
 /* ===== Reusable code - Here ===== */
@@ -26,12 +26,12 @@
 
 .sidebar header .image,
 .sidebar .icon {
-    min-width: 40px;
-    border-radius: 50%;
+    min-width: 60px;
+    border-radius: 6px;
 }
 
 .sidebar .icon {
-    min-width: 40px;
+    min-width: 60px;
     border-radius: 6px;
     height: 100%;
     display: flex;
