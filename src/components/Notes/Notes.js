@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './Notes.css'
-import Sidenav from '../Sidenav/Sidenav'
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -177,7 +176,6 @@ const Notes = () => {
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
       />
-    <Sidenav />
     <section className="home">
 
       {/* Add note Modal Starts */}
