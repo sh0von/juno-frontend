@@ -117,7 +117,7 @@ const Login = () => {
                 <Link to="/forgotpassword" className="form__forgot">Forgot Password?</Link>
 
                 {!isLoading && <button type="submit" className="form__button">Login</button>}
-                {isLoading && <button type="submit" className="form__button" style={{backgroundColor: '#15203a', cursor: 'not-allowed'}} disabled={true}><span class="loader"></span></button>}
+                {isLoading && <button type="submit" className="form__button" style={{backgroundColor: '#C6EBC5', cursor: 'not-allowed'}} disabled={true}><span class="loader"></span></button>}
 
                 <div style={{marginBottom: '25px',textAlign:'center'}}>
                     Don't have an account ? <Link to={'/signup'}>Sign up here</Link>
@@ -125,7 +125,7 @@ const Login = () => {
 
             </form>
         </div>
-        <ToastContainer toastStyle={{ backgroundColor: "#202d40", color: 'white' }} />
+        <ToastContainer toastStyle={{ backgroundColor: "#FA7070", color: 'white' }} />
     </div>
     </>
   )

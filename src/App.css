@@ -1,24 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap");
+
+
+:root {
+  /* ===== Colors ===== */
+  --body-color: #fff;
+  --sidebar-color: #FFF;
+  --primary-color: #f1d301;
+  --primary-color-light: #f1d301;
+  --toggle-color: #f1d301;
+  --text-color: #f1d301;
+
+
+  /* ====== Transition ====== */
+  --tran-03: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.3s ease;
+  --tran-05: all 0.3s ease;
+}
+
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Ubuntu',;
 }
 
-body {
-  background: #3B73C6;
+.black{
+  color:#000
+}
+:root {
+  --first-color: #f1d301;
+  --text-color: #000;
 }
 
 :root {
-  --first-color: #193a8f;
-  --text-color: #3B73C6;
-}
-
-:root {
-  --body-font: 'Roboto', sans-serif;
+  --body-font: 'Ubuntu';
   --big-font-size: 2rem;
   --normal-font-size: 0.938rem;
   --smaller-font-size: 0.875rem;
@@ -35,42 +53,33 @@ a {
 img {
   max-width: 100%;
   height: auto;
+} 
+.center-ev {
+  max-width: 1000px; /* Can be in percentage also. */
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
 }
 
 .wrapper {
-  margin: 50px;
   display: grid;
   gap: 25px;
-  grid-template-columns: repeat(auto-fill, 265px);
+  grid-template-columns: repeat(auto-fill, 295px);
 }
 
 .wrapper li {
-  height: 150px;
+  height: 120px;
   list-style: none;
   border-radius: 5px;
-  padding: 15px 20px 20px;
-  background: #fff;
+  padding: 10px 10px 10px 10px;
+  background:#f1d301 ;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 
 /* navbar */
 
-:root {
-  /* ===== Colors ===== */
-  --body-color: #E4E9F7;
-  --sidebar-color: #FFF;
-  --primary-color: #3B73C6;
-  --primary-color-light: #F6F5FF;
-  --toggle-color: #DDD;
-  --text-color: #707070;
-
-  /* ====== Transition ====== */
-  --tran-03: all 0.2s ease;
-  --tran-03: all 0.3s ease;
-  --tran-04: all 0.3s ease;
-  --tran-05: all 0.3s ease;
-}
 
 body {
   min-height: 100vh;
@@ -79,15 +88,14 @@ body {
 }
 
 ::selection {
-  background-color: var(--primary-color);
-  color: #fff;
+  background-color: #000;
+  color: #f1d301;
 }
 
 .home {
   position: absolute;
   top: 0;
   top: 0;
-  height: 100vh;
   width: 100%;
   background-color: var(--body-color);
   transition: var(--tran-05);
@@ -174,7 +182,7 @@ body {
 }
 
 .form {
-  height: 100vh;
+  height: 500px;
   display: grid;
   justify-content: center;
   align-items: center;

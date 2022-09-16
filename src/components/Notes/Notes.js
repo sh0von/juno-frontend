@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import LoadingBar from 'react-top-loading-bar'
-
+import randomColor from "random-color";
+const color = randomColor(); 
 const Notes = () => {
     const [notesList, setNotesList] = useState([]);
     const [addNoteTitle, setAddNoteTitle] = useState('');
@@ -172,7 +173,7 @@ const Notes = () => {
   return (
     <>
     <LoadingBar
-        color='#f11946'
+        color='#f1d301'
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
       />
@@ -207,27 +208,27 @@ const Notes = () => {
         <div className="popup">
           <div className="content">
             <header>
-              <p>Edit Note</p>
+              <p className="black">Edit Note</p>
               <i onClick={closeEditNoteModal} className="uil uil-times"></i>
             </header>
             <form onSubmit={updateNote} id="notes-form" action="#" enctype="multipart/form-data">
               <div className="row title">
-                <label>Title</label>
+                <label className="black">Title</label>
                 <input value={addNoteTitle} onChange={(e) => setAddNoteTitle(e.target.value)} id='modal-title-input' type="text" name="title" spellcheck="false"/>
               </div>
               <div className="row description">
-                <label>Description</label>
+                <label className="black">Description</label>
                 <textarea value={addNoteDescription} onChange={(e) => setAddNoteDescription(e.target.value)} name="description" spellcheck="false"></textarea>
               </div>
-              <button>Update Note</button>
+              <button className="black">Update Note</button>
             </form>
           </div>
         </div>
       </div>
       {/* Edit note Modal Ends */}
 
-      <div className="wrapper">
-        <li onClick={openAddNoteModalForNewNote} className="add-box">
+      <div className="wrapper center-ev">
+        <li onClick={openAddNoteModalForNewNote} className="add-box" >
           <div className="icon"><i className="uil uil-plus"></i></div>
           <p>Add new note</p>
         </li>
@@ -236,18 +237,19 @@ const Notes = () => {
         {notesList.map((note) => {
             const dateStu = note.createdAt;
             return (
-                <li id={note._id} key={note._id} className="note">
-                    <div className="details">
-                        <p>{note.title}</p>
+                <li id={note._id} key={note._id} className="note" >
+                    <div className="details" >
                         <span>{note.description}</span>
                     </div>
                     <div className="bottom-content">
                         <span>{convertToMonthName(new Date(dateStu).getMonth()) + " " + new Date(dateStu).getDate().toString() + ", " + new Date(dateStu).getFullYear()}</span>
                         <div id={`settings-${note._id}`} className="settings">
+
+                        <i className="padding10">{note.title}</i>
                             <i onClick={() => openMenu(note._id)} className="uil uil-ellipsis-h"></i>
                             <ul className="menu show">
-                                <li onClick={() => openAddNoteModalForEditNote(note._id)}><i className="uil uil-pen"></i>Edit</li>
-                                <li onClick={() => deleteNote(note._id)}><i className="uil uil-trash"></i>Delete</li>
+                                <li className="black" onClick={() => openAddNoteModalForEditNote(note._id)}><i className="uil uil-pen "></i>Edit</li>
+                                <li className="black" onClick={() => deleteNote(note._id)}><i className="uil uil-trash"></i>Delete</li>
                             </ul>
                         </div>
                     </div>
@@ -257,7 +259,7 @@ const Notes = () => {
 
 
       </div>
-      <ToastContainer toastStyle={{ backgroundColor: "#202d40", color: 'white' }} />
+      <ToastContainer toastStyle={{ backgroundColor:'#0000', color:'#fff' }} />
     </section>
     </>
   )

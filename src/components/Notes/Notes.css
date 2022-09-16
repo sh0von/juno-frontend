@@ -16,17 +16,16 @@ header,
 }
 
 .add-box .icon {
-    height: 78px;
-    width: 78px;
-    color: #3B73C6;
+    height: 48px;
+    width: 48px;
+    color: #000;
     font-size: 40px;
     border-radius: 50%;
     justify-content: center;
-    border: 2px dashed #3B73C6;
 }
 
 .add-box p {
-    color: #3B73C6;
+    color: #000;
     font-weight: 500;
     margin-top: 20px;
 }
@@ -34,6 +33,7 @@ header,
 .note {
     display: flex;
     flex-direction: column;
+    background-color:#f1d301 ;
     justify-content: space-between;
 }
 
@@ -54,13 +54,13 @@ header,
 
 .note .details:hover::-webkit-scrollbar-track,
 .popup textarea:hover::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #f1d301;
     border-radius: 25px;
 }
 
 .note .details:hover::-webkit-scrollbar-thumb,
 .popup textarea:hover::-webkit-scrollbar-thumb {
-    background: #e6e6e6;
+    background: #f1d301;
     border-radius: 25px;
 }
 
@@ -71,18 +71,18 @@ header,
 
 .note span {
     display: block;
-    color: #575757;
+    color: #000;
     font-size: 16px;
     margin-top: 5px;
 }
 
 .note .bottom-content {
     padding-top: 10px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #000;
 }
 
 .bottom-content span {
-    color: #6D6D6D;
+    color: #000;
     font-size: 14px;
 }
 
@@ -91,7 +91,7 @@ header,
 }
 
 .bottom-content .settings i {
-    color: #6D6D6D;
+    color: #000;
     cursor: pointer;
     font-size: 15px;
 }
@@ -101,7 +101,7 @@ header,
     bottom: 0;
     right: -5px;
     padding: 5px 0;
-    background: #fff;
+    background: #f1d301;
     position: absolute;
     border-radius: 4px;
     transform: scale(0);
@@ -130,7 +130,7 @@ header,
 }
 
 .menu li:hover {
-    background: #f5f5f5;
+    background: #f1d301;
 }
 
 .menu li i {
@@ -193,7 +193,7 @@ header,
 }
 
 .content header i {
-    color: #8b8989;
+    color: #000;
     cursor: pointer;
     font-size: 23px;
 }
@@ -219,7 +219,7 @@ form :where(input, textarea) {
     font-size: 17px;
     padding: 0 15px;
     border-radius: 4px;
-    border: 1px solid #999;
+    border: 1px solid #f1d301;
 }
 
 form :where(input, textarea):focus {
@@ -235,13 +235,13 @@ form .row textarea {
 form button {
     width: 100%;
     height: 50px;
-    color: #fff;
+    color: #000;
     outline: none;
     border: none;
     cursor: pointer;
     font-size: 17px;
     border-radius: 4px;
-    background: #3B73C6;
+    background: #f1d301;
 }
 
 @media (max-width: 660px) {
