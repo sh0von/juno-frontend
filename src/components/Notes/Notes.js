@@ -179,7 +179,6 @@ const Notes = () => {
       />
     <Sidenav />
     <section className="home">
-      <div className="text">Dashboard</div>
 
       {/* Add note Modal Starts */}
       <div id='popup-box' className="popup-box">

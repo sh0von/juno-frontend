@@ -12,59 +12,35 @@ const Sidenav = () => {
         navigate('/login');
     }
 
-    const toggleSideNav = () => {
-        const body = document.querySelector('body'),
-        sidebar = body.querySelector('nav');
-        
-        sidebar.classList.toggle("close");
-
-        // searchBtn.addEventListener("click" , () =>{
-        //     sidebar.classList.remove("close");
-        // })
-    }
-
-    
-    const searchbarClick = () => {
-        const body = document.querySelector('body'),
-            sidebar = body.querySelector('nav');
-
-        sidebar.classList.remove("close");
-    }
-
-
-
 
   return (
     <nav className="sidebar close">
       <header>
           <div className="image-text">
               <span className="image">
-                  <img src={logo} alt=""/>
               </span>
 
               <div className="text logo-text">
-                  <span className="name">D-Tracker</span>
-                  <span className="profession">by CryWolf</span>
               </div>
           </div>
-
-          <i onClick={toggleSideNav} className='bx bx-chevron-right toggle'></i>
       </header>
 
       <div className="menu-bar">
-          <div className="menu">
 
               <ul className="menu-links">
-                  <li className="nav-link">
-                      <a href="/">
-                          <i className='bx bx-home-alt icon' ></i>
-                          <span className="text nav-text">Soon..</span>
-                      </a>
-                  </li>
+              <li>
+                  <a href="/" id="home">
+                      <i className ='bx bx-home icon' ></i>
+                  </a>
+              </li>
+                <li>
+                  <a href="/" id="home">
+                      <i className ='bx bx-user-circle icon' ></i>
+                  </a>
+              </li>
+              
 
               </ul>
-          </div>
-
           <div className="bottom-content">
               <li>
                   <a onClick={logout} href="/" id="logout-button">
