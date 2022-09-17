@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import './Notes.css'
-import Sidenav from '../Sidenav/Sidenav'
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import LoadingBar from 'react-top-loading-bar'
-
+import randomColor from "random-color";
+const color = randomColor(); 
 const Notes = () => {
     const [notesList, setNotesList] = useState([]);
     const [addNoteTitle, setAddNoteTitle] = useState('');
@@ -18,7 +18,7 @@ const Notes = () => {
     const getAllNotes = async () => {
         const token = sessionStorage.getItem('auth-token');
         setProgress(20);
-        const response = await fetch('http://localhost:8181/api/notes/getallnotes', {
+        const response = await fetch('https://light-teal-leggings.cyclic.app/api/notes/getallnotes', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ const Notes = () => {
 
     const getSingleNote = async (id) => {
       const token = sessionStorage.getItem('auth-token');
-      const response = await fetch(`http://localhost:8181/api/notes/getnote/${id}`, {
+      const response = await fetch(`https://light-teal-leggings.cyclic.app/api/notes/getnote/${id}`, {
           method: 'GET',
           headers: {
               'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ const Notes = () => {
     const deleteNote = async (id) => {
         if (window.confirm('Are You sure you want to delete this note?')) {
             const token = sessionStorage.getItem('auth-token');
-            const response = await fetch(`http://localhost:8181/api/notes/deletenote/${id}`, {
+            const response = await fetch(`https://light-teal-leggings.cyclic.app/api/notes/deletenote/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -120,7 +120,7 @@ const Notes = () => {
     const addANewNote = async (e) => {
         e.preventDefault();
         const token = sessionStorage.getItem('auth-token');
-        const response = await fetch('http://localhost:8181/api/notes/addnote', {
+        const response = await fetch('https://light-teal-leggings.cyclic.app/api/notes/addnote', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -144,7 +144,7 @@ const Notes = () => {
       e.preventDefault();
 
       const token = sessionStorage.getItem('auth-token');
-      const response = await fetch(`http://localhost:8181/api/notes/updatenote/${updateNoteId}`, {
+      const response = await fetch(`https://light-teal-leggings.cyclic.app/api/notes/updatenote/${updateNoteId}`, {
           method: 'PUT',
           headers: {
               'Content-Type': 'application/json',
@@ -173,32 +173,27 @@ const Notes = () => {
   return (
     <>
     <LoadingBar
-        color='#f11946'
+        color='#c7ebc5'
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
       />
-    <Sidenav />
-    <section className="home">
-      <div className="text">Dashboard</div>
+    <section className="home bg">
 
       {/* Add note Modal Starts */}
       <div id='popup-box' className="popup-box">
         <div className="popup">
           <div className="content">
             <header>
-              <p>Add a new Note</p>
+              <p>What's on your mind?</p>
               <i onClick={closeAddNoteModal} className="uil uil-times"></i>
             </header>
             <form onSubmit={addANewNote} id="notes-form" action="#" enctype="multipart/form-data">
-              <div className="row title">
-                <label>Title</label>
-                <input id='modal-title-input' value={addNoteTitle} onChange={(e) => setAddNoteTitle(e.target.value)} type="text" name="title" spellcheck="false"/>
-              </div>
+         
               <div className="row description">
-                <label>Description</label>
+                <label>##</label>
                 <textarea value={addNoteDescription} onChange={(e) => setAddNoteDescription(e.target.value)} name="description" spellcheck="false"></textarea>
               </div>
-              <button>Add Note</button>
+              <button>Add It</button>
             </form>
           </div>
         </div>
@@ -210,47 +205,45 @@ const Notes = () => {
         <div className="popup">
           <div className="content">
             <header>
-              <p>Edit Note</p>
+              <p className="black">Edit It</p>
               <i onClick={closeEditNoteModal} className="uil uil-times"></i>
             </header>
             <form onSubmit={updateNote} id="notes-form" action="#" enctype="multipart/form-data">
-              <div className="row title">
-                <label>Title</label>
-                <input value={addNoteTitle} onChange={(e) => setAddNoteTitle(e.target.value)} id='modal-title-input' type="text" name="title" spellcheck="false"/>
-              </div>
+             
               <div className="row description">
-                <label>Description</label>
+                <label className="black">##</label>
                 <textarea value={addNoteDescription} onChange={(e) => setAddNoteDescription(e.target.value)} name="description" spellcheck="false"></textarea>
               </div>
-              <button>Update Note</button>
+              <button className="black">Update It</button>
             </form>
           </div>
         </div>
       </div>
       {/* Edit note Modal Ends */}
 
-      <div className="wrapper">
-        <li onClick={openAddNoteModalForNewNote} className="add-box">
+      <div className="wrapper center-ev">
+        <li onClick={openAddNoteModalForNewNote} className="add-box" >
           <div className="icon"><i className="uil uil-plus"></i></div>
-          <p>Add new note</p>
+          <p>What's on your mind?</p>
         </li>
 
 
         {notesList.map((note) => {
             const dateStu = note.createdAt;
             return (
-                <li id={note._id} key={note._id} className="note">
-                    <div className="details">
-                        <p>{note.title}</p>
+                <li id={note._id} key={note._id} className="note" >
+                    <div className="details" >
                         <span>{note.description}</span>
                     </div>
                     <div className="bottom-content">
                         <span>{convertToMonthName(new Date(dateStu).getMonth()) + " " + new Date(dateStu).getDate().toString() + ", " + new Date(dateStu).getFullYear()}</span>
                         <div id={`settings-${note._id}`} className="settings">
+
+                        <i className="padding10">{note.title}</i>
                             <i onClick={() => openMenu(note._id)} className="uil uil-ellipsis-h"></i>
                             <ul className="menu show">
-                                <li onClick={() => openAddNoteModalForEditNote(note._id)}><i className="uil uil-pen"></i>Edit</li>
-                                <li onClick={() => deleteNote(note._id)}><i className="uil uil-trash"></i>Delete</li>
+                                <li className="black" onClick={() => openAddNoteModalForEditNote(note._id)}><i className="uil uil-pen "></i>Edit</li>
+                                <li className="black" onClick={() => deleteNote(note._id)}><i className="uil uil-trash"></i>Delete</li>
                             </ul>
                         </div>
                     </div>
@@ -260,7 +253,7 @@ const Notes = () => {
 
 
       </div>
-      <ToastContainer toastStyle={{ backgroundColor: "#202d40", color: 'white' }} />
+      <ToastContainer toastStyle={{ backgroundColor:'#c7ebc5', color:'#fff' }} />
     </section>
     </>
   )
