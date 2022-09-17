@@ -68,6 +68,7 @@ img {
 
 
 .wrapper {
+  height: 100%;
   display: grid;
   gap: 25px;
   grid-template-columns: repeat(auto-fill, 295px);
@@ -227,12 +228,12 @@ body {
 
 .form__icon {
   font-size: 1.5rem;
-  color: var(--text-color);
+  color: #000;
   transition: .3s;
 }
 
 .form__div.focus .form__icon {
-  color: var(--first-color);
+  color: #000;
 }
 
 .form__label {
@@ -241,14 +242,14 @@ body {
   left: .75rem;
   top: .25rem;
   font-size: var(--normal-font-size);
-  color: var(--text-color);
+  color: #000;
   transition: .3s;
 }
 
 .form__div.focus .form__label {
   top: -1.5rem;
   font-size: .875rem;
-  color: var(--first-color);
+  color: #000;
 }
 
 .form__div-input {
@@ -293,7 +294,7 @@ body {
   border: none;
   margin-bottom: 3rem;
   background-color: var(--primary-color);
-  color: #fff;
+  color: #000;
   border-radius: .5rem;
   cursor: pointer;
   transition: all .5s ease-in;
