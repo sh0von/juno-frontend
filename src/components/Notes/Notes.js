@@ -173,7 +173,7 @@ const Notes = () => {
   return (
     <>
     <LoadingBar
-        color='#f1d301'
+        color='#c7ebc5'
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
       />

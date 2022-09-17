@@ -33,7 +33,7 @@ header,
 .note {
     display: flex;
     flex-direction: column;
-    background-color:#f1d301 ;
+    background-color:#c7ebc5 ;
     justify-content: space-between;
 }
 
@@ -54,13 +54,13 @@ header,
 
 .note .details:hover::-webkit-scrollbar-track,
 .popup textarea:hover::-webkit-scrollbar-track {
-    background: #f1d301;
+    background: #c7ebc5;
     border-radius: 25px;
 }
 
 .note .details:hover::-webkit-scrollbar-thumb,
 .popup textarea:hover::-webkit-scrollbar-thumb {
-    background: #f1d301;
+    background: #c7ebc5;
     border-radius: 25px;
 }
 
@@ -101,7 +101,7 @@ header,
     bottom: 0;
     right: -5px;
     padding: 5px 0;
-    background: #f1d301;
+    background: #c7ebc5;
     position: absolute;
     border-radius: 4px;
     transform: scale(0);
@@ -130,7 +130,7 @@ header,
 }
 
 .menu li:hover {
-    background: #f1d301;
+    background: #c7ebc5;
 }
 
 .menu li i {
@@ -219,7 +219,7 @@ form :where(input, textarea) {
     font-size: 17px;
     padding: 0 15px;
     border-radius: 4px;
-    border: 1px solid #f1d301;
+    border: 1px solid #c7ebc5;
 }
 
 form :where(input, textarea):focus {
@@ -241,7 +241,7 @@ form button {
     cursor: pointer;
     font-size: 17px;
     border-radius: 4px;
-    background: #f1d301;
+    background: #c7ebc5;
 }
 
 @media (max-width: 660px) {

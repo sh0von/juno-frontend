@@ -6,10 +6,10 @@
   /* ===== Colors ===== */
   --body-color: #fff;
   --sidebar-color: #FFF;
-  --primary-color: #f1d301;
-  --primary-color-light: #f1d301;
-  --toggle-color: #f1d301;
-  --text-color: #f1d301;
+  --primary-color: #c7ebc5;
+  --primary-color-light: #c7ebc5;
+  --toggle-color: #c7ebc5;
+  --text-color: #c7ebc5;
 
 
   /* ====== Transition ====== */
@@ -31,7 +31,7 @@
   color:#000
 }
 :root {
-  --first-color: #f1d301;
+  --first-color: #c7ebc5;
   --text-color: #000;
 }
 
@@ -73,7 +73,7 @@ justify-content:center;
   list-style: none;
   border-radius: 5px;
   padding: 10px 10px 10px 10px;
-  background:#f1d301 ;
+  background:#c7ebc5 ;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
@@ -92,7 +92,7 @@ body {
 
 ::selection {
   background-color: #000;
-  color: #f1d301;
+  color: #c7ebc5;
 }
 
 .home {
