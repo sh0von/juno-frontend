@@ -102,7 +102,7 @@ body {
   top: 0;
   width: 100%;  
   background-color: #fff;
-  background: repeating-linear-gradient( 45deg, #d3f200, #d3f200 8px, #fff 8px, #fff 40px );
+  background: repeating-linear-gradient( 45deg, #c7ebc5, #c7ebc5 8px, #fff 8px, #fff 40px );
   transition: var(--tran-05);
 }
 
