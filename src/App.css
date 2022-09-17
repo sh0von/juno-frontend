@@ -62,10 +62,6 @@ justify-content:center;
 }
 
 
-
-
-
-
 .wrapper {
   display: grid;
   gap: 25px;
@@ -73,7 +69,7 @@ justify-content:center;
 }
 
 .wrapper li {
-  height: 120px;
+  height: 100px;
   list-style: none;
   border-radius: 5px;
   padding: 10px 10px 10px 10px;
@@ -85,9 +81,12 @@ justify-content:center;
 /* navbar */
 
 
+
 body {
-  min-height: 100vh;
-  background-color: var(--body-color);
+
+  min-height:100vh; 
+  min-height:100%;
+  overflow: auto;
   transition: var(--tran-05);
 }
 
@@ -98,10 +97,12 @@ body {
 
 .home {
   position: absolute;
+  min-height: 100vh;
   top: 0;
   top: 0;
-  width: 100%;
-  background-color: var(--body-color);
+  width: 100%;  
+  background-color: #fff;
+  background: repeating-linear-gradient( 45deg, #d3f200, #d3f200 8px, #fff 8px, #fff 40px );
   transition: var(--tran-05);
 }
 

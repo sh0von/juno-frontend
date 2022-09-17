@@ -184,19 +184,16 @@ const Notes = () => {
         <div className="popup">
           <div className="content">
             <header>
-              <p>Add a new Note</p>
+              <p>What's on your mind?</p>
               <i onClick={closeAddNoteModal} className="uil uil-times"></i>
             </header>
             <form onSubmit={addANewNote} id="notes-form" action="#" enctype="multipart/form-data">
-              <div className="row title">
-                <label>Title</label>
-                <input id='modal-title-input' value={addNoteTitle} onChange={(e) => setAddNoteTitle(e.target.value)} type="text" name="title" spellcheck="false"/>
-              </div>
+         
               <div className="row description">
-                <label>Description</label>
+                <label>##</label>
                 <textarea value={addNoteDescription} onChange={(e) => setAddNoteDescription(e.target.value)} name="description" spellcheck="false"></textarea>
               </div>
-              <button>Add Note</button>
+              <button>Add It</button>
             </form>
           </div>
         </div>
@@ -208,19 +205,16 @@ const Notes = () => {
         <div className="popup">
           <div className="content">
             <header>
-              <p className="black">Edit Note</p>
+              <p className="black">Edit It</p>
               <i onClick={closeEditNoteModal} className="uil uil-times"></i>
             </header>
             <form onSubmit={updateNote} id="notes-form" action="#" enctype="multipart/form-data">
-              <div className="row title">
-                <label className="black">Title</label>
-                <input value={addNoteTitle} onChange={(e) => setAddNoteTitle(e.target.value)} id='modal-title-input' type="text" name="title" spellcheck="false"/>
-              </div>
+             
               <div className="row description">
-                <label className="black">Description</label>
+                <label className="black">##</label>
                 <textarea value={addNoteDescription} onChange={(e) => setAddNoteDescription(e.target.value)} name="description" spellcheck="false"></textarea>
               </div>
-              <button className="black">Update Note</button>
+              <button className="black">Update It</button>
             </form>
           </div>
         </div>
@@ -230,7 +224,7 @@ const Notes = () => {
       <div className="wrapper center-ev">
         <li onClick={openAddNoteModalForNewNote} className="add-box" >
           <div className="icon"><i className="uil uil-plus"></i></div>
-          <p>Add new note</p>
+          <p>What's on your mind?</p>
         </li>
 
 
