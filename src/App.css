@@ -55,11 +55,10 @@ img {
   height: auto;
 } 
 .center-ev {
-  max-width: 1000px; /* Can be in percentage also. */
-  height: auto;
-  margin: 0 auto;
-  padding: 10px;
-  position: relative;
+  padding:10px;
+display:flex;
+justify-content:center;
+
 }
 
 
@@ -68,7 +67,6 @@ img {
 
 
 .wrapper {
-  height: 100%;
   display: grid;
   gap: 25px;
   grid-template-columns: repeat(auto-fill, 295px);
