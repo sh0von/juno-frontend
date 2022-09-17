@@ -13,7 +13,7 @@ const ResetPassword = () => {
   useEffect(() => {
 
     const checkToken = async () => {
-      const response = await fetch('https://light-teal-leggings.cyclic.app/api/auth/checktoken', {
+      const response = await fetch('https://dark-jade-crocodile-gown.cyclic.app//api/auth/checktoken', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -37,7 +37,7 @@ const ResetPassword = () => {
   const changePassword = async (e) => {
     e.preventDefault();
 
-      const response = await fetch('https://light-teal-leggings.cyclic.app/api/auth/changepassword', {
+      const response = await fetch('https://dark-jade-crocodile-gown.cyclic.app//api/auth/changepassword', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

@@ -51,7 +51,7 @@ const Signup = () => {
 
         setIsLoading(true);
         // API Call
-        const response = await fetch('https://light-teal-leggings.cyclic.app/api/auth/register', {
+        const response = await fetch('https://dark-jade-crocodile-gown.cyclic.app//api/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

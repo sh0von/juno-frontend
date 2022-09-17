@@ -17,7 +17,7 @@ const Notes = () => {
     const getAllNotes = async () => {
         const token = sessionStorage.getItem('auth-token');
         setProgress(20);
-        const response = await fetch('https://light-teal-leggings.cyclic.app/api/notes/getallnotes', {
+        const response = await fetch('https://dark-jade-crocodile-gown.cyclic.app//api/notes/getallnotes', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ const Notes = () => {
 
     const getSingleNote = async (id) => {
       const token = sessionStorage.getItem('auth-token');
-      const response = await fetch(`https://light-teal-leggings.cyclic.app/api/notes/getnote/${id}`, {
+      const response = await fetch(`https://dark-jade-crocodile-gown.cyclic.app//api/notes/getnote/${id}`, {
           method: 'GET',
           headers: {
               'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ const Notes = () => {
     const deleteNote = async (id) => {
         if (window.confirm('Are You sure you want to delete this note?')) {
             const token = sessionStorage.getItem('auth-token');
-            const response = await fetch(`https://light-teal-leggings.cyclic.app/api/notes/deletenote/${id}`, {
+            const response = await fetch(`https://dark-jade-crocodile-gown.cyclic.app//api/notes/deletenote/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -115,7 +115,7 @@ const Notes = () => {
     const addANewNote = async (e) => {
         e.preventDefault();
         const token = sessionStorage.getItem('auth-token');
-        const response = await fetch('https://light-teal-leggings.cyclic.app/api/notes/addnote', {
+        const response = await fetch('https://dark-jade-crocodile-gown.cyclic.app//api/notes/addnote', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -138,7 +138,7 @@ const Notes = () => {
       e.preventDefault();
 
       const token = sessionStorage.getItem('auth-token');
-      const response = await fetch(`https://light-teal-leggings.cyclic.app/api/notes/updatenote/${updateNoteId}`, {
+      const response = await fetch(`https://dark-jade-crocodile-gown.cyclic.app//api/notes/updatenote/${updateNoteId}`, {
           method: 'PUT',
           headers: {
               'Content-Type': 'application/json',
