@@ -94,15 +94,17 @@ body {
   background-color: #000;
   color: #c7ebc5;
 }
-
+.bg{
+  opacity: .5;
+  background-color: #fff;
+  background: repeating-linear-gradient( 45deg, #c7ebc5, #c7ebc5 8px, #fff 8px, #fff 40px );
+}
 .home {
   position: absolute;
   min-height: 100vh;
   top: 0;
   top: 0;
   width: 100%;  
-  background-color: #fff;
-  background: repeating-linear-gradient( 45deg, #c7ebc5, #c7ebc5 8px, #fff 8px, #fff 40px );
   transition: var(--tran-05);
 }
 

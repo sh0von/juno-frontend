@@ -177,7 +177,7 @@ const Notes = () => {
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
       />
-    <section className="home">
+    <section className="home bg">
 
       {/* Add note Modal Starts */}
       <div id='popup-box' className="popup-box">
