@@ -42,14 +42,14 @@ const ForgotPassword = () => {
           </div>
           <div className="button-panel">
             {!isLoading && <input type="submit" class="button" title="Sign In" value="Send Email"></input>}
-            {isLoading && <button style={{backgroundColor: '#15203a', cursor: 'not-allowed'}} disabled={true} class="button" value=""><span class="loader"></span></button>}
+            {isLoading && <button style={{backgroundColor: '#c7ebc5', cursor: 'not-allowed'}} disabled={true} class="button" value=""><span class="loader"></span></button>}
           </div>
         </form>
         <div className="form-footer">
           <p>Remember Your Password? <Link to="/login">Login</Link></p>
         </div>
       </div>
-      <ToastContainer toastStyle={{ backgroundColor: "#202d40", color: 'white' }} />
+      <ToastContainer toastStyle={{ backgroundColor: "#c7ebc5", color: 'white' }} />
   </div>
   )
 }

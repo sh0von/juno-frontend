@@ -125,7 +125,7 @@ const Login = () => {
 
             </form>
         </div>
-        <ToastContainer toastStyle={{ backgroundColor: "#FA7070", color: 'white' }} />
+        <ToastContainer toastStyle={{ backgroundColor: "#c7ebc5", color: 'white' }} />
     </div>
     </>
   )

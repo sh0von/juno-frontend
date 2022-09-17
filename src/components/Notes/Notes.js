@@ -253,7 +253,7 @@ const Notes = () => {
 
 
       </div>
-      <ToastContainer toastStyle={{ backgroundColor:'#0000', color:'#fff' }} />
+      <ToastContainer toastStyle={{ backgroundColor:'#c7ebc5', color:'#fff' }} />
     </section>
     </>
   )
