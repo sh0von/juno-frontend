@@ -8,7 +8,6 @@ import randomColor from "random-color";
 const color = randomColor(); 
 const Notes = () => {
     const [notesList, setNotesList] = useState([]);
-    const [addNoteTitle, setAddNoteTitle] = useState('');
     const [addNoteDescription, setAddNoteDescription] = useState('');
     const [updateNoteId, setUpdateNoteId] = useState("");
     const [progress, setProgress] = useState(0);
@@ -42,7 +41,6 @@ const Notes = () => {
           }
       });
       const json = await response.json();
-      setAddNoteTitle(json.title);
       setAddNoteDescription(json.description);
     }
 
@@ -86,7 +84,6 @@ const Notes = () => {
         const popupBox = document.getElementById('popup-box');
         popupBox.classList.add('show');
 
-        document.getElementById('modal-title-input').focus();
 
         // setModalHeading("Add a new Note");
 
@@ -98,7 +95,6 @@ const Notes = () => {
       const popupBox = document.getElementById('popup-box-edit');
       popupBox.classList.add('show');
 
-      document.getElementById('modal-title-input').focus();
 
       await getSingleNote(id);
 
@@ -114,7 +110,6 @@ const Notes = () => {
         document.getElementById('popup-box-edit').classList.remove('show');
 
         setAddNoteDescription('');
-        setAddNoteTitle('');
     }
 
     const addANewNote = async (e) => {
@@ -125,16 +120,15 @@ const Notes = () => {
             headers: {
                 'Content-Type': 'application/json',
                 'auth-token': token
-            }, body: JSON.stringify({ title: addNoteTitle, description: addNoteDescription })
+            }, body: JSON.stringify({  description: addNoteDescription })
         });
         const json = await response.json();
-        if (json.title) {
+        if (json.description) {
             toast.success("Your Note Has Been Added Successfully!");
         }
 
         closeAddNoteModal();
 
-        setAddNoteTitle('');
         setAddNoteDescription('');
 
         await getAllNotes();
@@ -149,7 +143,7 @@ const Notes = () => {
           headers: {
               'Content-Type': 'application/json',
               'auth-token': token
-          }, body: JSON.stringify({ title: addNoteTitle, description: addNoteDescription })
+          }, body: JSON.stringify({  description: addNoteDescription })
       });
       const json = await response.json();
       toast.success(json.success);
@@ -188,10 +182,7 @@ const Notes = () => {
               <i onClick={closeAddNoteModal} className="uil uil-times"></i>
             </header>
             <form onSubmit={addANewNote} id="notes-form" action="#" enctype="multipart/form-data">
-              <div className="row title">
-                <label>Title</label>
-                <input id='modal-title-input' value={addNoteTitle} onChange={(e) => setAddNoteTitle(e.target.value)} type="text" name="title" spellcheck="false"/>
-              </div>
+           
               <div className="row description">
                 <label>Description</label>
                 <textarea value={addNoteDescription} onChange={(e) => setAddNoteDescription(e.target.value)} name="description" spellcheck="false"></textarea>
@@ -212,10 +203,7 @@ const Notes = () => {
               <i onClick={closeEditNoteModal} className="uil uil-times"></i>
             </header>
             <form onSubmit={updateNote} id="notes-form" action="#" enctype="multipart/form-data">
-              <div className="row title">
-                <label className="black">Title</label>
-                <input value={addNoteTitle} onChange={(e) => setAddNoteTitle(e.target.value)} id='modal-title-input' type="text" name="title" spellcheck="false"/>
-              </div>
+            
               <div className="row description">
                 <label className="black">Description</label>
                 <textarea value={addNoteDescription} onChange={(e) => setAddNoteDescription(e.target.value)} name="description" spellcheck="false"></textarea>
@@ -245,7 +233,6 @@ const Notes = () => {
                         <span>{convertToMonthName(new Date(dateStu).getMonth()) + " " + new Date(dateStu).getDate().toString() + ", " + new Date(dateStu).getFullYear()}</span>
                         <div id={`settings-${note._id}`} className="settings">
 
-                        <i className="padding10">{note.title}</i>
                             <i onClick={() => openMenu(note._id)} className="uil uil-ellipsis-h"></i>
                             <ul className="menu show">
                                 <li className="black" onClick={() => openAddNoteModalForEditNote(note._id)}><i className="uil uil-pen "></i>Edit</li>
