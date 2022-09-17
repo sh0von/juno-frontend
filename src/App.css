@@ -267,7 +267,7 @@ body {
   background: none;
   padding: .5rem .75rem;
   font-size: 1.2rem;
-  color: var(--first-color);
+  color: #000;
   transition: .3s;
 }
 

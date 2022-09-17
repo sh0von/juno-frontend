@@ -100,7 +100,7 @@ const Login = () => {
 
                     <div className="form__div-input">
                         <label htmlFor="" className="form__label">Username</label>
-                        <input value={username} onChange={(e) => setUsername(e.target.value)} type="text" name="username" className="form__input black" id="username" aria-describedby="emailHelp"/>
+                        <input style={color:#000} value={username} onChange={(e) => setUsername(e.target.value)} type="text" name="username" className="form__input black" id="username" aria-describedby="emailHelp"/>
                     </div>
                 </div>
 
