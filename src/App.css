@@ -95,9 +95,8 @@ body {
   color: #c7ebc5;
 }
 .bg{
-  opacity: .5;
   background-color: #fff;
-  background: repeating-linear-gradient( 45deg, #c7ebc5, #c7ebc5 8px, #fff 8px, #fff 40px );
+  background: repeating-linear-gradient( 45deg, #d8f1d6, #d8f1d6 8px, #fff 8px, #fff 40px );
 }
 .home {
   position: absolute;
