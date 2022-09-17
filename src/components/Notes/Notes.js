@@ -210,6 +210,10 @@ const Notes = () => {
         <div className="popup">
           <div className="content">
             <header>
+
+
+
+
               <p>Edit Note</p>
               <i onClick={closeEditNoteModal} className="uil uil-times"></i>
             </header>
@@ -249,8 +253,7 @@ const Notes = () => {
                         <div id={`settings-${note._id}`} className="settings">
                             <i onClick={() => openMenu(note._id)} className="uil uil-ellipsis-h"></i>
                             <ul className="menu show">
-                                <li onClick={() => openAddNoteModalForEditNote(note._id)}><i className="uil uil-pen"></i>Edit</li>
-                                <li onClick={() => deleteNote(note._id)}><i className="uil uil-trash"></i>Delete</li>
+                                 <li onClick={() => deleteNote(note._id)}><i className="uil uil-trash"></i>Delete</li>
                             </ul>
                         </div>
                     </div>
